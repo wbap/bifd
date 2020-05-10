@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://wba-initiative.org/bifd/"
+     xml:base="https://wba-initiative.org/bifd/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bifd="https://wba-initiative.org/bifd/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://wba-initiative.org/ontology/bifd/">
+        <owl:versionIRI rdf:resource="https://wba-initiative.org/ontology/bifd/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://wba-initiative.org/bifd/hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://wba-initiative.org/bifd/hasPart">
+        <owl:inverseOf rdf:resource="https://wba-initiative.org/bifd/partOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wba-initiative.org/bifd/inputCircuit -->
+
+    <owl:ObjectProperty rdf:about="https://wba-initiative.org/bifd/inputCircuit">
+        <rdfs:domain rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+        <rdfs:range rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+        <rdfs:label>inputCircuit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wba-initiative.org/bifd/outputCircuit -->
+
+    <owl:ObjectProperty rdf:about="https://wba-initiative.org/bifd/outputCircuit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+        <rdfs:range rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+        <rdfs:label>outputCircuit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wba-initiative.org/bifd/partOf -->
+
+    <owl:ObjectProperty rdf:about="https://wba-initiative.org/bifd/partOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>partOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wba-initiative.org/bifd/transmitter -->
+
+    <owl:ObjectProperty rdf:about="https://wba-initiative.org/bifd/transmitter">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+        <rdfs:range rdf:resource="https://wba-initiative.org/bifd/NeuroTransmitter"/>
+        <rdfs:label>transmitter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/modType -->
+
+    <owl:ObjectProperty rdf:about="https://wba-initiative.org/ontology/bifd/modType">
+        <rdfs:range rdf:resource="https://wba-initiative.org/ontology/bifd/ModType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/morphology -->
+
+    <owl:ObjectProperty rdf:about="https://wba-initiative.org/ontology/bifd/morphology">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/ontology/bifd/morphology"/>
+                <owl:allValuesFrom rdf:resource="https://wba-initiative.org/ontology/bifd/SomaMorphology"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://wba-initiative.org/bifd/functionality -->
+
+    <owl:DatatypeProperty rdf:about="https://wba-initiative.org/bifd/functionality">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of the function</rdfs:comment>
+        <rdfs:label>functionality</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://wba-initiative.org/bifd/implementation -->
+
+    <owl:DatatypeProperty rdf:about="https://wba-initiative.org/bifd/implementation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pointer (e.g., URL) to implementation</rdfs:comment>
+        <rdfs:label>implementation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://wba-initiative.org/bifd/reference -->
+
+    <owl:DatatypeProperty rdf:about="https://wba-initiative.org/bifd/reference">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pointer (doi, ISBN, etc.) to material to support the description</rdfs:comment>
+        <rdfs:label>reference</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://wba-initiative.org/bifd/size -->
+
+    <owl:DatatypeProperty rdf:about="https://wba-initiative.org/bifd/size">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A number of neurons (for a Circuit) or axons (for a Connection)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://wba-initiative.org/bifd/uniform -->
+
+    <owl:DatatypeProperty rdf:about="https://wba-initiative.org/bifd/uniform">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True iff the Circuit is uniform</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/taxon -->
+
+    <owl:DatatypeProperty rdf:about="https://wba-initiative.org/ontology/bifd/taxon">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Specifies an ID (such as URI or interwiki link) representing an animal type (taxon).</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://wba-initiative.org/bifd/Circuit -->
+
+    <owl:Class rdf:about="https://wba-initiative.org/bifd/Circuit">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/functionality"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/implementation"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/reference"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/uniform"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A set of neurons with a particular function</rdfs:comment>
+        <rdfs:label>Circuit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://wba-initiative.org/bifd/Connection -->
+
+    <owl:Class rdf:about="https://wba-initiative.org/bifd/Connection">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+                <owl:someValuesFrom rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+                <owl:someValuesFrom rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/transmitter"/>
+                <owl:someValuesFrom rdf:resource="https://wba-initiative.org/bifd/NeuroTransmitter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/ontology/bifd/modType"/>
+                <owl:allValuesFrom rdf:resource="https://wba-initiative.org/ontology/bifd/ModType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/functionality"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/size"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/reference"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A connection from a Circuit to another Circuit.</rdfs:comment>
+        <rdfs:label>Connection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://wba-initiative.org/bifd/NeuroTransmitter -->
+
+    <owl:Class rdf:about="https://wba-initiative.org/bifd/NeuroTransmitter">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A type of neuro-transmitter.</rdfs:comment>
+        <rdfs:label>NeuroTransmitter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://wba-initiative.org/bifd/UniformCircuit -->
+
+    <owl:Class rdf:about="https://wba-initiative.org/bifd/UniformCircuit">
+        <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/transmitter"/>
+                <owl:someValuesFrom rdf:resource="https://wba-initiative.org/bifd/NeuroTransmitter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/ontology/bifd/modType"/>
+                <owl:allValuesFrom rdf:resource="https://wba-initiative.org/ontology/bifd/ModType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/size"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/uniform"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Circuit containing neurons with a uniform function.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/ModType -->
+
+    <owl:Class rdf:about="https://wba-initiative.org/ontology/bifd/ModType"/>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/SomaMorphology -->
+
+    <owl:Class rdf:about="https://wba-initiative.org/ontology/bifd/SomaMorphology">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The shape of a soma</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://wba-initiative.org/bifd/Dopamin -->
+
+    <owl:NamedIndividual rdf:about="https://wba-initiative.org/bifd/Dopamin">
+        <rdf:type rdf:resource="https://wba-initiative.org/bifd/NeuroTransmitter"/>
+        <rdfs:label>Dopamin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://wba-initiative.org/bifd/GABA -->
+
+    <owl:NamedIndividual rdf:about="https://wba-initiative.org/bifd/GABA">
+        <rdf:type rdf:resource="https://wba-initiative.org/bifd/NeuroTransmitter"/>
+        <rdfs:label>GABA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/Acetylcholine -->
+
+    <owl:NamedIndividual rdf:about="https://wba-initiative.org/ontology/bifd/Acetylcholine">
+        <rdf:type rdf:resource="https://wba-initiative.org/bifd/NeuroTransmitter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/Excitatory -->
+
+    <owl:NamedIndividual rdf:about="https://wba-initiative.org/ontology/bifd/Excitatory">
+        <rdf:type rdf:resource="https://wba-initiative.org/ontology/bifd/ModType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/Glutamate -->
+
+    <owl:NamedIndividual rdf:about="https://wba-initiative.org/ontology/bifd/Glutamate">
+        <rdf:type rdf:resource="https://wba-initiative.org/bifd/NeuroTransmitter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/Inhibitory -->
+
+    <owl:NamedIndividual rdf:about="https://wba-initiative.org/ontology/bifd/Inhibitory">
+        <rdf:type rdf:resource="https://wba-initiative.org/ontology/bifd/ModType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/Modulatory -->
+
+    <owl:NamedIndividual rdf:about="https://wba-initiative.org/ontology/bifd/Modulatory">
+        <rdf:type rdf:resource="https://wba-initiative.org/ontology/bifd/ModType"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
