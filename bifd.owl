@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://wba-initiative.org/bifd/"
      xml:base="https://wba-initiative.org/bifd/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -96,6 +97,20 @@
     
 
 
+    <!-- https://wba-initiative.org/ontology/bifd/taxon -->
+
+    <owl:ObjectProperty rdf:about="https://wba-initiative.org/ontology/bifd/taxon">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://wba-initiative.org/ontology/bifd/taxon"/>
+                <owl:allValuesFrom rdf:resource="https://wba-initiative.org/ontology/bifd/Taxon"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment>Specifies a related animal type (taxon).</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -156,15 +171,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True iff the Circuit is uniform</rdfs:comment>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://wba-initiative.org/ontology/bifd/taxon -->
-
-    <owl:DatatypeProperty rdf:about="https://wba-initiative.org/ontology/bifd/taxon">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>Specifies an ID (such as URI or interwiki link) representing an animal type (taxon).</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -322,6 +328,14 @@
 
     <owl:Class rdf:about="https://wba-initiative.org/ontology/bifd/SomaMorphology">
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The shape of a soma</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/Taxon -->
+
+    <owl:Class rdf:about="https://wba-initiative.org/ontology/bifd/Taxon">
+        <rdfs:comment>Animal type</rdfs:comment>
     </owl:Class>
     
 
