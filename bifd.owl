@@ -186,7 +186,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:allValuesFrom rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
