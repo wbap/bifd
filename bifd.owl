@@ -359,6 +359,7 @@
 
     <owl:NamedIndividual rdf:about="https://wba-initiative.org/ontology/bifd/Acetylcholine">
         <rdf:type rdf:resource="https://wba-initiative.org/bifd/NeuroTransmitter"/>
+        <rdfs:label>Acetylcholine</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -367,6 +368,7 @@
 
     <owl:NamedIndividual rdf:about="https://wba-initiative.org/ontology/bifd/Excitatory">
         <rdf:type rdf:resource="https://wba-initiative.org/ontology/bifd/ModType"/>
+        <rdfs:label>Excitatory</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -375,6 +377,7 @@
 
     <owl:NamedIndividual rdf:about="https://wba-initiative.org/ontology/bifd/Glutamate">
         <rdf:type rdf:resource="https://wba-initiative.org/bifd/NeuroTransmitter"/>
+        <rdfs:label>Glutamate</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -383,6 +386,7 @@
 
     <owl:NamedIndividual rdf:about="https://wba-initiative.org/ontology/bifd/Inhibitory">
         <rdf:type rdf:resource="https://wba-initiative.org/ontology/bifd/ModType"/>
+        <rdfs:label>Inhibitory</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -391,6 +395,7 @@
 
     <owl:NamedIndividual rdf:about="https://wba-initiative.org/ontology/bifd/Modulatory">
         <rdf:type rdf:resource="https://wba-initiative.org/ontology/bifd/ModType"/>
+        <rdfs:label>Modulatory</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
