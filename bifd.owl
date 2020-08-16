@@ -6,10 +6,49 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:bifd="https://wba-initiative.org/bifd/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:bifd1="https://wba-initiative.org/ontology/bifd/">
     <owl:Ontology rdf:about="https://wba-initiative.org/ontology/bifd/">
         <owl:versionIRI rdf:resource="https://wba-initiative.org/ontology/bifd/"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/functionality -->
+
+    <owl:AnnotationProperty rdf:about="https://wba-initiative.org/ontology/bifd/functionality">
+        <rdfs:comment>Description of the function</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/implementation -->
+
+    <owl:AnnotationProperty rdf:about="https://wba-initiative.org/ontology/bifd/implementation">
+        <rdfs:comment>A pointer (e.g., URL) to implementation</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- https://wba-initiative.org/ontology/bifd/reference -->
+
+    <owl:AnnotationProperty rdf:about="https://wba-initiative.org/ontology/bifd/reference">
+        <rdfs:comment>A pointer (doi, ISBN, etc.) to material to support the description</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -107,39 +146,6 @@
     
 
 
-    <!-- https://wba-initiative.org/bifd/functionality -->
-
-    <owl:DatatypeProperty rdf:about="https://wba-initiative.org/bifd/functionality">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of the function</rdfs:comment>
-        <rdfs:label>functionality</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://wba-initiative.org/bifd/implementation -->
-
-    <owl:DatatypeProperty rdf:about="https://wba-initiative.org/bifd/implementation">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pointer (e.g., URL) to implementation</rdfs:comment>
-        <rdfs:label>implementation</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://wba-initiative.org/bifd/reference -->
-
-    <owl:DatatypeProperty rdf:about="https://wba-initiative.org/bifd/reference">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pointer (doi, ISBN, etc.) to material to support the description</rdfs:comment>
-        <rdfs:label>reference</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://wba-initiative.org/bifd/size -->
 
     <owl:DatatypeProperty rdf:about="https://wba-initiative.org/bifd/size">
@@ -191,24 +197,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/functionality"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/implementation"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/reference"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/uniform"/>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
@@ -248,20 +236,8 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/functionality"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/size"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/reference"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A connection from a Circuit to another Circuit.</rdfs:comment>
