@@ -1,5 +1,6 @@
 import rdflib
 import argparse
+import re
 
 URI_TMP = 'https://wba-initiative.org/noprefix/'
 BIFD_PREFIX = 'https://wba-initiative.org/bifd/'
@@ -76,7 +77,7 @@ def main(argv):
         k = str(row[0])
         v = k.replace("http://183.181.89.140/mediawiki/index.php/Special:URIResolver/Category-3A",
                       WBRA_PREFIX)
-        mapping[k] = v
+        mapping[k] = re.match('.*/',v).group() + re.sub('.*/','',v).replace('-2D','-') if re.match('.*/',v) else v
 
     for row in qres6:
         k = str(row[0])
