@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """BIF_Exel2OWL.py
-    USE: python bif_exel2owl.py infile bifd_url [outdir]
-         outfile name is infile name + .owl
+    USE: python bif_exel2owl.py infile bifd_url outfile
 """
 import openpyxl
 from owlready2 import *
@@ -12,15 +11,16 @@ def createCircuits(ws):
         for i in range(ws.max_row-1):
             val = ws.cell(row=i+2, column=1).value
             if val!=None and val.strip()!="":
-                label = ws.cell(row=i+2, column=2).value
-                parts = ws.cell(row=i+2, column=3).value
+                labels = ws.cell(row=i+2, column=2).value
+                parts = ws.cell(row=i+2, column=4).value
+                superClasses = ws.cell(row=i+2, column=3).value
                 pos = val.find(':')
                 className = val.strip().replace(' ', '_') if pos<0 else val[pos+1:].strip().replace(' ', '_')
                 if p==0:
-                    clm4 = ws.cell(row=i+2, column=4).value	# Functionality
-                    clm5 = ws.cell(row=i+2, column=5).value	# References
-                    clm6 = ws.cell(row=i+2, column=6).value	# TODO: implementation
-                    clm7 = ws.cell(row=i+2, column=7).value	# Uniform?
+                    clm4 = ws.cell(row=i+2, column=5).value	# Functionality
+                    clm5 = ws.cell(row=i+2, column=6).value	# References
+                    clm6 = ws.cell(row=i+2, column=7).value	# TODO: implementation
+                    clm7 = ws.cell(row=i+2, column=8).value	# Uniform?
                     uniform = False
                     if clm7!=None and clm7:
                         uniform = True
@@ -29,30 +29,47 @@ def createCircuits(ws):
                             cls = types.new_class(className, (bifdns.UniformCircuit,))
                         else:
                             cls = types.new_class(className, (bifdns.Circuit,))
-                        cls.label = label
+                        addLabels(labels, cls)
                         if clm4!=None and clm4!="":
                             cls.functionality = clm4
                         if clm5!=None and clm5!="":
                             references = clm5.split(";")
                             cls.reference = references
                 else:
-                    addHasPart(parts, className)
+                    cls = eval("onto." + className)
+                    addHasPart(parts, cls)
+                    addSubClassOf(superClasses, cls)
 
-def addHasPart(parts, className):
-    if parts!=None:
+def addLabels(labels, cls):
+    if labels:
+        lbls = labels.split(";")
+        for label in lbls:
+            cls.label.append(label)
+
+def addHasPart(parts, cls):
+    if parts:
         prts = parts.split(";")
         for part in prts:
             prt = None
-            cls = None
             try:
                 prt = eval("onto." + part.strip())
-                cls = eval("onto." + className)
             except:
                 continue
             if inspect.isclass(prt):
                 # print(cls, cls.is_a)
                 # print(bifdns.hasPart.some(prt))
                 cls.is_a.append(bifdns.hasPart.some(prt))
+
+def addSubClassOf(superClasses, cls):
+    if superClasses:
+        sups = superClasses.split(";")
+        for superClassName in sups:
+            sc = None
+            try:
+                sc = eval("onto." + superClassName.strip())
+            except:
+                continue
+            cls.is_a.append(sc)
 
 def createConnections(ws):
     for i in range(ws.max_row-1):
@@ -71,7 +88,7 @@ def createConnections(ws):
         connectionID = inputCircuit + "-" + outputCircuit
         with onto:
             cls = types.new_class(connectionID, (bifdns.Connection,))
-            cls.label = label
+            cls.label = connectionID
             addInOut(cls, inputCircuit, outputCircuit)
             clm3 = ws.cell(row=i+2, column=4).value	# TODO: Transmitter
             clm4 = ws.cell(row=i+2, column=4).value	# Functionality
@@ -97,32 +114,20 @@ def addInOut(cls, inputCircuit, outputCircuit):
     cls.is_a.append(bifdns.outputCircuit.some(outputClass))
 
 if __name__=='__main__':
-    if len(sys.argv)<=2:
-        print("USE: python bif_exel2owl.py infile bifd_url [outdir]")
-        print("     outfile name is infile name + .owl")
-        exit()
-    # wb=openpyxl.load_workbook('BG.DHBA.bif.xlsx')
-    # bifd = get_ontology('https://raw.githubusercontent.com/wbap/bifd/master/bifd.owl').load()
-    # onto = get_ontology("https://wba-initiative.org/bifd/BG_DHBA.owl")
-    infilePath = sys.argv[1]
     if len(sys.argv)<=3:
-        outfilePath = "./"
-    else:
-        outfilePath = sys.argv[3]
+        print("USE: python bif_exel2owl.py infile bifd_url outfile")
+        exit()
+
+    infilePath = sys.argv[1]
+    outfilePath = sys.argv[3]
     lastSlash = infilePath.rfind('/')
     if lastSlash>=0:
         infileName = infilePath[lastSlash+1:]
     else:
         infileName = infilePath
-    lastPoint = infileName.rfind('.')
-    if lastPoint>=0:
-        outfileName = infileName[0:lastPoint] + ".owl"
-    else:
-        outfileName = infileName + ".owl"
 
     wb=openpyxl.load_workbook(sys.argv[1])
     bifd = get_ontology(sys.argv[2]).load()
-    onto = get_ontology("https://wba-initiative.org/bifd/" + outfileName)
 
     bifdns = bifd.get_namespace('https://wba-initiative.org/bifd/')
     # Defining annotation properties
@@ -134,7 +139,17 @@ if __name__=='__main__':
         class implementation(comment):
             pass
 
+    # Defining an ontoloby
+    project = wb['Project']
+    pname = project.cell(row=2, column=1).value
+    if not pname:
+       print("Error: no project name")
+       exit()
+    description = project.cell(row=2, column=3).value
+    onto = get_ontology("https://wba-initiative.org/wbra/" + pname +"/")
+    onto.metadata.comment.append(description)
+
     createCircuits(wb['Circuit'])
     createConnections(wb['Connection'])
-    onto_path.append(outfilePath)
-    onto.save()
+    # onto_path.append(outfilePath)
+    onto.save(file=outfilePath)
