@@ -50,12 +50,8 @@ def addHasPart(parts, cls):
     if parts:
         prts = parts.split(";")
         for part in prts:
-            prt = None
-            try:
-                prt = eval("onto." + part.strip())
-            except:
-                continue
-            if inspect.isclass(prt):
+            prt = eval("onto." + part.strip())
+            if prt!= None and inspect.isclass(prt):
                 # print(cls, cls.is_a)
                 # print(bifdns.hasPart.some(prt))
                 cls.is_a.append(bifdns.hasPart.some(prt))
@@ -64,12 +60,9 @@ def addSubClassOf(superClasses, cls):
     if superClasses:
         sups = superClasses.split(";")
         for superClassName in sups:
-            sc = None
-            try:
-                sc = eval("onto." + superClassName.strip())
-            except:
-                continue
-            cls.is_a.append(sc)
+            sc = eval("onto." + superClassName.strip())
+            if sc!= None and inspect.isclass(sc):
+                cls.is_a.append(sc)
 
 def createConnections(ws):
     for i in range(ws.max_row-1):
@@ -100,14 +93,12 @@ def createConnections(ws):
                 cls.reference = references
 
 def addInOut(cls, inputCircuit, outputCircuit):
-    try:
-        inputClass = eval("onto." + inputCircuit)
-    except:
+    inputClass = eval("onto." + inputCircuit)
+    if inputClass == None or not inspect.isclass(inputClass):
         print("No input circuit defined: " + inputCircuit)
         return
-    try:
-        outputClass = eval("onto." + outputCircuit)
-    except:
+    outputClass = eval("onto." + outputCircuit)
+    if outputClass == None or not inspect.isclass(outputClass):
         print("No output circuit defined: " + outputCircuit)
         return
     cls.is_a.append(bifdns.inputCircuit.some(inputClass))
