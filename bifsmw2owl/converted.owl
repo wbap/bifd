@@ -1,0 +1,2191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:bifd="https://wba-initiative.org/bifd/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Cx-SCi">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N4e8d5f57f1e94d00b34767ff23d806dc">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SCi"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Cx-SCi</rdfs:label>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N15e048509c6a478c97b31f9889460d9a">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Cx"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SCi has dominant inputs from FEF20, and plays an important role in visual attention and target selection</bifd:functionality>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/GPe-Striosome">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Na5b24cf57eff4edc88451fd3c1a66be3">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Striosome"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N872ddae4793246fd81703c363b0e523f">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPe"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the activities of GPe could modulate decision threshold in the striatum, thus affecting the final results of decision making</bifd:functionality>
+    <rdfs:label>GPe-Striosome</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/GPe-STN">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N658a7fe09b9e46dda23b33047620464f">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/STN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Restrains SC.
+Tonically inhibits STN.</bifd:functionality>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N85a31d45670c47f6b85d5539f2d92a78">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPe"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>GPe-STN</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/STN-SNC">
+    <rdfs:label>STN-SNC</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nf31029d034a0490e88f135e3d8ed9c02">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/STN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictive rewards</bifd:functionality>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nc84f20431b7a4a1b9668931275e632bb">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Parahippocampal_cortex">
+    <rdfs:label xml:lang="en">parahippocampal cortex</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Parahippocampal cortex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/STG-dTP">
+    <rdfs:label>STG-dTP</rdfs:label>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auditory or polymodal inputs</bifd:functionality>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N9d607ee895624c60ac53a6b9551a0724">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/DTP"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nc7bcad37deb84fadbcf7ad794e7b5487">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/STG"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/STN-GPe">
+    <rdfs:label>STN-GPe</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb1667cc6be114d8f817974d191bfba08">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/STN"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nd7dce090e13f41ff99efd1091f0fb523">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPe"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SCs-SCi">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>SCs-SCi</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N97e9fa94c6584dafa492ba8dc2176bcf">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SCs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N11e5ccd3132c43efa20cef456d663c33">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SCi"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/LPFC-Cd">
+    <rdfs:label>LPFC-Cd</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N4543307a39054a9abcf3dd2de2a54fce">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Cd"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N2ebb3f9f84a140ac8513fa53d3b87509">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/LPFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Hy-lPFC">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N40b0970febdc4d34be5269a278e44b73">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/LPFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Hy-lPFC</rdfs:label>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nee04af369bd447ffa28be610fefad34d">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Hy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/TH-Matrix">
+    <rdfs:label>TH-Matrix</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N602e03ba47224ae48ecd061f94836416">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Matrix"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N692b3f7cf43d434fa0bc8f3a55083cd5">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/TH"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PPTg-Striosome">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>PPTg-Striosome</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Naa1060607e9048eba68151e989b715fc">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N1a4c4eb4c9814e08ac1d06e68f52efbd">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Striosome"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SNr-SCi">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Na2180463136741aca8486a887af52e1b">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SCi"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ne3a879ed2ce9406a925354528419dad8">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="http://wba-initiative.org/wbra/SNr"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>SNr-SCi</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PPTg-Hy">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:label>PPTg-Hy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N508cbfe7001f4bbebfe0492fe9cc68a0">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Hy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N4ebfc76bd03e4d388c35aff83c72d747">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PPTg-Brain_Stem">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nd0fb3a1485c64ee99f991802ed4f72dc">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Brain_Stem"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N68903a86ba974b7182e001583e007f4b">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>PPTg-Brain Stem</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Posterior_cingulate">
+    <rdfs:label>Posterior cingulate</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">posterior cingulate</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PPTg-GPi">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nc851e6ba14fb4d67ae7c03bc02510111">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPi"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N6b9c80dfd22e46e3a90b8f814a1eb1cf">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>PPTg-GPi</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/GPi-SCi">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nf2763bde13c0403888c0fb6cc911eedb">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nbfb9626ad1784070b74a2db5780a7055">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SCi"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>GPi-SCi</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/TH-Cx">
+    <rdfs:label>TH-Cx</rdfs:label>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N1a00192153104134a48a32160a0277e0">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Cx"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N86dfad7c50824c80971b7ede44ef5ac9">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/TH"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PPTg-STN">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nd810be74990b411990a78c2953a4b3e4">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/STN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N76e5d384b0d94605982f5a2dbf7a0251">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>PPTg-STN</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SNC-GPi">
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regulation of the balance between the direct and the indirect pathways</bifd:functionality>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N58ead79dee4349768d9b722562750072">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ne0c5c597e11e4bfab41c2e73b88e02d7">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>SNC-GPi</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/TEO">
+    <rdfs:label xml:lang="en">TEO</rdfs:label>
+    <rdfs:label>TEO</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SCi-TH">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N185213d11d8a44ae91aaedca292d2402">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SCi"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>SCi-TH</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control movements of the eyes, ears, head, and limbs, as well as outputs to nonspecific sensory and motor areas of the thalamus</bifd:functionality>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N70a3c67962d243f3aaf9b7864ae6131b">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/TH"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Orbitofrontal_cortex-vlPFC">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ne36a2f0f9773457bbf00a9d68d0e969c">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VlPFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nc147fd87661a4bec97f8c78ab9cd3181">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Orbitofrontal_cortex"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>Orbitofrontal cortex-vlPFC</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Cx-Striosome">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N28fda61e015b401cbd61c6c39441a11a">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Striosome"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">motor-related info
+cognitive-related info
+limbic system-related info
+contextual, motor, and reward information</bifd:functionality>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nc9edbdb71dc44902b29ec71d3ba688fa">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Cx"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>Cx-Striosome</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PRC">
+    <rdfs:label xml:lang="en">PRC</rdfs:label>
+    <rdfs:label>PRC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/DTP-LOrG">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N69dd8c160d3640b588b5d4eb17d96ab5">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/DTP"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>DTP-LOrG</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb0e4273411d145d690e088ce2ff52567">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/LOrG"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Hy-PFC">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nc46dd96c3d5043e68cf5fc37fe20ccfc">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:label>Hy-PFC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb7200acf19544bccb7084b96de7ab976">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Hy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PAll-Ios">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N4dcb39c1c577422481f743ed0d254457">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PAll"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nd6d750b923a442b0a05ef8dfc21b2012">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Ios"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>PAll-Ios</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/LPFC-Pu">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N0ace9efc809a48449bf07c72670948f9">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Pu"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N784eb751ef204f66b0b86dc86d94af0a">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/LPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>LPFC-Pu</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/GPe-GPi">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N0e7918ce416f4ba7ac193ebe22a0adfd">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>GPe-GPi</rdfs:label>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ne610cca2ce1f4db58cf99c99eed301d3">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPe"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Orbital_network">
+    <rdfs:label xml:lang="en">orbital network</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Orbital network</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Matrix-GPi">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ned817f9642e8493e95bb630102e0ef2b">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N91a62c5dfde54ea29129b9c46198e947">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Matrix"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Matrix-GPi</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Pn">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">Pn</rdfs:label>
+    <rdfs:label>Pn</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/CA3-3ARat">
+    <bifd:taxon rdf:resource="http://wba-initiative.org/wbra/Rat"/>
+    <rdfs:label>CA3:Rat</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label xml:lang="en">CA3</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/wbra/CA3"/>
+    <bifd:taxon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCBITaxon_10116</bifd:taxon>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">300000.0</bifd:size>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Inferior_temporal_cortex">
+    <rdfs:label>Inferior temporal cortex</rdfs:label>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Essential for visual object recognition.</bifd:functionality>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">inferior temporal cortex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Sb">
+    <rdfs:label xml:lang="en">Sb</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Sb</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SCs-PPTg">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>SCs-PPTg</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nd60d855928e94c4ba3b510f9ce0c0120">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb1a746f5cb5949a1876b219b6c581a49">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SCs"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SNR-TH">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N749e80ab8e20428c95dfacf7b1b6c40c">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNR"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N49ee3ca9335244589f87a35fca118fce">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/TH"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>SNR-TH</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PHG">
+    <rdfs:label xml:lang="en">PHG</rdfs:label>
+    <rdfs:label>PHG</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/TPO">
+    <rdfs:label>TPO</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nc421203e33ea4f6db398ac57d20f391b">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/RTPO"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">TPO</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Matrix-SNR">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N0499b513b97646619f445d79ba3b2dfe">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNR"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Needca3a45b46463b84565d3799401276">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Matrix"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Matrix-SNR</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Caudoputamen">
+    <rdfs:label>Caudoputamen</rdfs:label>
+    <rdfs:label xml:lang="en">caudoputamen</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PPTg-SNC">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N8d5e333f184947f7a313a67cfde3daae">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>PPTg-SNC</rdfs:label>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rewards</bifd:functionality>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Na5ef38d6cb534aca95efdad581809745">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PPTg-Matrix">
+    <rdfs:label>PPTg-Matrix</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N85d94f7f106a47e0815d7334952c3e9e">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Neb9857398b6540219cec50c759a96969">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Matrix"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/FEF">
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1016/j.cortex.2011.07.002</bifd:reference>
+    <rdfs:label xml:lang="en">frontal eye field</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>FEF</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Claustrum">
+    <rdfs:label>Claustrum</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">claustrum</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/VlPFC-cCd">
+    <rdfs:label>VlPFC-cCd</rdfs:label>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Na758efd29def444c97d7df5dc88e375b">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VlPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N7f736a118b5241e3ae8a44d63992ca5f">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/CCd"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/RvdlPFC-rvdlPFC">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nd240e36564f042189db5939e8ba3c735">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/RvdlPFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>RvdlPFC-rvdlPFC</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nd4f5bfa8b9584fe7a3a331a8236f5192">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/RvdlPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/STN-PPTg">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ne15c87a7cbaf4e36abce0d881e1bd384">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nd19282303ebd4cd19e8d62ceed2cf9d4">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/STN"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">control of locomotion</bifd:functionality>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>STN-PPTg</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Frontal_cortex">
+    <rdfs:label>Frontal cortex</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">frontal cortex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/BG">
+    <rdfs:label xml:lang="en">BG</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Na8097b5f9859428ca89d4feedc79c64c">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPe"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>BG</rdfs:label>
+    <rdfs:label xml:lang="en">basal ganglia</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nddc88a44a31d41ffa484966387f6c9d6">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNR"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N24f22b004cf14964869dfe75b5151a02">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/STN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N80794f2dd1614c21a338d5d0b6750451">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N53307488a028423b9b96201aae84cee5">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N944d7a49c44f4668b32302b15129b395">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Str"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/GPi-PPTg">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>GPi-PPTg</rdfs:label>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nbe25de4e6dba41b29907b2c7d3cb45c5">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N65c8a1f1d55f469d8c28781e80c6b602">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPi"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/STN-GPi">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N5505b75de68d476382c37de9f3d21ed8">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/STN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N59ecbbc07e524d9889f8b294d36e84e8">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Restrains SC</bifd:functionality>
+    <rdfs:label>STN-GPi</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Mediodorsal_network">
+    <rdfs:label>Mediodorsal network</rdfs:label>
+    <rdfs:label xml:lang="en">mediodorsal network</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Perirhinal_cortex">
+    <rdfs:label>Perirhinal cortex</rdfs:label>
+    <rdfs:label xml:lang="en">perirhinal cortex</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SPL">
+    <rdfs:label xml:lang="en">SPL</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>SPL</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/HiF-lPFC">
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sparser inputs</bifd:functionality>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nd2a106a1b8e74903b1afbdc0c5819a44">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/HiF"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+    <rdfs:label>HiF-lPFC</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N45e458ec13824f2eb5efaed18528c9ce">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/LPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Anterior_superior_temporal_cortex">
+    <rdfs:label xml:lang="en">anterior superior temporal cortex</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Anterior superior temporal cortex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Cx-STN">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N3f8d247ade1e4decaaa1ebd7727ba654">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Cx"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">executive control which allows hyper-direct control of BG output based on frontal innervations.
+projection from the frontal cortex can usurp the cortico-BG loops to slow, break or stop responding, with the STN responding to stop cues whether actions are cancelled or not.
+STN and PFC disconnection via contralateral lesions and STN lesion, stimulation and inactivation enhances preservation, a repetitive, compulsive form of responding.
+only from frontal lobes.
+this pathway is faster than striatal pathway.</bifd:functionality>
+    <rdfs:label>Cx-STN</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nc3b3d48bb8804d5eaa70f88193bb3d17">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/STN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Cx-SCs">
+    <rdfs:label>Cx-SCs</rdfs:label>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N43d3d547c3e5417f86d30315969c8d98">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SCs"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nff3743f2a4b8473ba6dcfea7448c9040">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Cx"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Mediodorsal_Network">
+    <rdfs:label xml:lang="en">mediodorsal network</rdfs:label>
+    <rdfs:label>Mediodorsal Network</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nef7761f352324e169c84db44f4cb4286">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/DlPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/GPe-Matrix">
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the activities of GPe could modulate decision threshold in the striatum, thus affecting the final results of decision making</bifd:functionality>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nbf1c7834ee124d6d909aeb55f4793e62">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPe"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N2b2f316f71144df69b599d3c787a95ee">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Matrix"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>GPe-Matrix</rdfs:label>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PPTg-GPe">
+    <rdfs:label>PPTg-GPe</rdfs:label>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N2356cebd78af4be2b5713d50f8ffc2e1">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPe"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N5947705824f24420b7ee75ea77fa14dd">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SNC-Matrix">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ne9dfaae5c1434cb9bc08f6075d11a69d">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Matrix"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nce8aa80002804f02bf4990927b0c0c15">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>SNC-Matrix</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Orbital_Network">
+    <rdfs:label xml:lang="en">orbital network</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Orbital Network</rdfs:label>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual, somatosensory, auditory, olfactory, and gustatory info</bifd:functionality>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/GPi-Striosome">
+    <rdfs:label>GPi-Striosome</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N14333a7a5dd3462bb819ffaa7bc5aa02">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Striosome"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb62b61ec81784bfcb8836985878142da">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Orbitoventral_network">
+    <rdfs:label xml:lang="en">orbitoventral network</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Orbitoventral network</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/EC">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>EC</rdfs:label>
+    <rdfs:label xml:lang="en">EC</rdfs:label>
+    <rdfs:label xml:lang="en">entorhinal cortex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Hy-PPTg">
+    <rdfs:label>Hy-PPTg</rdfs:label>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N09e7cf1d00684d2a819b4dacaf8d919c">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Hy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Na177f8fe68a741e6a7a2b197d53be094">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/GPe-SNR">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ne373ace7befe464ca61e5f1c5d98f1a2">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNR"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Na1dbeff1e14942c3a6fbf10913bedaff">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPe"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>GPe-SNR</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/CPFC-PFC">
+    <rdfs:label>CPFC-PFC</rdfs:label>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project to the more differentiated ares in the PFC</bifd:functionality>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nd61a4e10a1b947a0a329f257e5b034f1">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N8de6aecb9bce4d23abbd92bd415296bf">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/CPFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/MPFC-dlPFC">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nc8b61c778379431e80c0b9887c89e5b5">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/MPFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:label>MPFC-dlPFC</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N0df4b74e5b764aef95813d1b5508999d">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/DlPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PAll-Proisocortex">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N14f9ab23a3aa45bcb7577fb96b3552ad">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PAll"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Na6de8f44ac664bc9a2453aabfed07e6b">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Proisocortex"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>PAll-Proisocortex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/OPFC-vmPu">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>OPFC-vmPu</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N750aff9447ab4480ba3deca4a523058a">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/OPFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Na094f4e3558949f69f269482c4ddf625">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VmPu"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/GPi-TH">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb52edfe5825e4b1e9733ddde04c39cea">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/TH"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N8b0a7456d388433e855cee688f1c82a0">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPi"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>GPi-TH</rdfs:label>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/MPFC-Hy">
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Most of the outputs of medial PFC</bifd:functionality>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+    <rdfs:label>MPFC-Hy</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Na5b408f3204e468ba0392c082434f19b">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Hy"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N172cfec1edae41b79e9b8176698bd936">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/MPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/MPFC-basilar_pons">
+    <rdfs:label>MPFC-basilar pons</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N2f6c8e9829c64af28bbc4ca7de683f28">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/MPFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N6ae153ed2744413182672c769dc132c9">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Basilar_pons"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Striosome-SNR">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nd78d56f412c643b6b9e4048235e1251b">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNR"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>Striosome-SNR</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N6d8e31790f5e4eec9b4b2a3c1e68c94d">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Striosome"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Medial_network">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Medial network</rdfs:label>
+    <rdfs:label xml:lang="en">medial network</rdfs:label>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Play major roles in autonomic and somatic (visceromotor) responses to emotional stimuli.</bifd:functionality>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/CA3-CA1">
+    <rdfs:label>CA3-CA1</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ncbf99acea3b64b45975aed95e7cdc1db">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/CA3"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nf9676827839b41f087d3acff6ddd3083">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/CA1"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:transmitter rdf:resource="https://wba-initiative.org/bifd/Glutamate"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SNC-STR">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb8f0c6e450c0446a82d524bbb66cfb8e">
+        <owl:someValuesFrom rdf:resource="http://wba-initiative.org/wbra/STR"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>SNC-STR</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N48143affca224f57be8987ce53580a0f">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PPTg-SCs">
+    <rdfs:label>PPTg-SCs</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb116a5be31e6413b8f5437d249200bf2">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SCs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nfc04f30028574cc89a36429ea08553b6">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PPTg-TH">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N3698039bacd14aa080fe4c692b4660f6">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/TH"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N340678f200ad4b288cacf797db1f0f16">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>PPTg-TH</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/RTPO-PFC">
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Preferentially project to the less differentiated areas in the PFC</bifd:functionality>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nc8a13321ee254b2fadc9f59b96964225">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/RTPO"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N88b07c920e0a45769223c53150212123">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>RTPO-PFC</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Striosome-SNC">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N7e992476d79644c98c6cd1bdb70b9b01">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Striosome"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Striosome-SNC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Predictive rewards</bifd:functionality>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N1ee23690a5c9471eb566680afd38bd0e">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SCs-TH">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N6d6cd60c44ee42e98a562630e8cc26cb">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/TH"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:label>SCs-TH</rdfs:label>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orienting movements, rather than for detailed visual processing</bifd:functionality>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N5dd12509580a40cda1764fce0b31af8a">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SCs"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Orbitoventral_Network">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N03ed24d629354d4996f66bffce63a2f7">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VlPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Orbitoventral Network</rdfs:label>
+    <rdfs:label xml:lang="en">orbitoventral network</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SNr-PPTg">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N84062a39ac6f427798a90b470d897085">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N7f66f7f2ba3c499caeb452f97aa7c8a8">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="http://wba-initiative.org/wbra/SNr"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:label>SNr-PPTg</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Amg-clPFC">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N1d6ff7112462422cb1e68959f311c40e">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Amg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N48186fb462be4eb4ad56721bd41853d5">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/ClPFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Few direct inputs</bifd:functionality>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>Amg-clPFC</rdfs:label>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Cx-Matrix">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N53742add9c0c4e79a37953fc4b37dfac">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Cx"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Cx-Matrix</rdfs:label>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">motor-related info
+cognitive-related info
+limbic system-related info
+contextual, motor, and reward information</bifd:functionality>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N8d5138a451dc4aa2ae6e55c021da0f69">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Matrix"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Ventral_pallidum">
+    <rdfs:label xml:lang="en">ventral pallidum</rdfs:label>
+    <rdfs:label>Ventral pallidum</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SC">
+    <rdfs:label xml:lang="en">SC</rdfs:label>
+    <rdfs:label>SC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Matrix-GPe">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N163ecc1d489747d584df7052814b3bae">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPe"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Matrix-GPe</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb6bab497df18421aaadc3db51038e4ee">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Matrix"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/RvdlPFC-vFEF">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N18e6fd8b36b04221828f864cdcdc152c">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/RvdlPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N92db0e35b4014cad88dfa00d5576f00a">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VFEF"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:label>RvdlPFC-vFEF</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PrS-lPFC">
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LPFC is innervated predominantly by the presubiculum</bifd:functionality>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N18c9e03a2e5e4cc5a4792652667f266d">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PrS"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N7f53aa3ebb68486797325e6d44c504b7">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/LPFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+    <rdfs:label>PrS-lPFC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SI">
+    <rdfs:label>SI</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">SI</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Ins-aPFC">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ne487028d6c6245ba8e531125fdef4117">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/APFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nfa678cfbf6a443b7a081012364115638">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Ins"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:label>Ins-aPFC</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/VlPFC-vCd">
+    <rdfs:label>VlPFC-vCd</rdfs:label>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Na4862d46d05c45a889c7329ab5006baf">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VCd"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb8149308581a46a7ae7a0ed28ac8d193">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VlPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SNC-SNR">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nf7aebb702cfb4c5890bffc7dce2aa1d5">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNR"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N3054304c182d4e5597722e781482f4e3">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SNC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:label>SNC-SNR</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/TH-Striosome">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N3a04f34666a94745adf613bef2591de0">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/TH"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nbe3c523c49104cdbb3351a8a994c3ff2">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Striosome"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>TH-Striosome</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PPTg-Spinal_Cord">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nfa91c022719042e8ab405d52ed4158bd">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Spinal_Cord"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:label>PPTg-Spinal Cord</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nc9ecd6a40c834b1486823423fce79d9f">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/TP">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N8b4640deeb4b43319fcafdd6da332a32">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VTP"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">TP</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nc67fdc264c15418db57172c18644e623">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/DTP"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>TP</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Striosome-GPe">
+    <rdfs:label>Striosome-GPe</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N36c24e4ae27e47b5ad76627344d6280a">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPe"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N3bd8c44aa02647a3ab378bde9023a35c">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Striosome"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Restrains SC.
+Inhibits projections of the GPe, results in the net reduction of inhibition of the STN</bifd:functionality>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/OlfA">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>OlfA</rdfs:label>
+    <rdfs:label xml:lang="en">OlfA</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/OFC-aPFC">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ned456cc081da4500a2dbb1bb9535e33b">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/APFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N1d33b7f740f94520ae1fe63b5270895e">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/OFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>OFC-aPFC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Proisocortex-Ins">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb48c97ad3a5b4155a661b5edf0dbfaac">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Ins"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:label>Proisocortex-Ins</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nd805845c92254c66837209196c5e5b4b">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Proisocortex"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/TH-PPTg">
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:label>TH-PPTg</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N5bc5925f77304251b5d949c559b78366">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/TH"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ndd86771441de4ec6929dde89a49a3b91">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PPTg"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Hippocampus">
+    <rdfs:label xml:lang="ko">해마체</rdfs:label>
+    <rdfs:label>Hippocampus</rdfs:label>
+    <rdfs:label xml:lang="ja">海馬</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://github.com/CompCogNeuro/ed4</bifd:reference>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N90cb3efae18749c5a6d16f9ac0a843ea">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/CA3"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N967b62ed558b4259b834d2cc21e2f982">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Dentate_gyrus"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">hippocampus</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N75bd77871896435ab683f8ad5a3717b0">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/CA1"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Ventral_striatum">
+    <rdfs:label xml:lang="en">ventral striatum</rdfs:label>
+    <rdfs:label>Ventral striatum</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Striosome-GPi">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N2488b1a5a711490a8387cf928fc493c7">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nff0b119636ae4fc79732081dabde8c16">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Striosome"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Disinhibits SC.
+the resulting reduction in the SNr activity helps release actions.</bifd:functionality>
+    <rdfs:label>Striosome-GPi</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SbN-PFC">
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb9e32ee35ec9471f9b21255f85e20651">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/PFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:label>SbN-PFC</rdfs:label>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ventral lateral nuclei mediates this</bifd:functionality>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nbd8d13c506a24a3e8e74b0a6c95c5cfd">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/SbN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/CA1-3ARat">
+    <bifd:taxon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCBITaxon_10116</bifd:taxon>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/wbra/CA1"/>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tag1:Func. for Tag1.</bifd:functionality>
+    <rdfs:label>CA1:Rat</rdfs:label>
+    <bifd:taxon rdf:resource="http://wba-initiative.org/wbra/Rat"/>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Test</bifd:functionality>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*Test,2020</bifd:reference>
+    <rdfs:label xml:lang="en">CA1</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tag2:Func. for Tag2.</bifd:functionality>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Auditory_association_cortex">
+    <rdfs:label xml:lang="en">auditory association cortex</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Auditory association cortex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Matrix-Striosome">
+    <rdfs:label>Matrix-Striosome</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N1fd5fb72f9054557aa82416e1ff2011c">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Striosome"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ned3e7c4b1773485fba70ca6dd31a10fa">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Matrix"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Proisocortex-Iso">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N1713c993ebe04a97bace739111455b34">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Proisocortex"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N0401292c50e24f4da86035ca18c63538">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Iso"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:label>Proisocortex-Iso</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Orbitofrontal_Network">
+    <rdfs:label xml:lang="en">orbitofrontal network</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Orbitofrontal Network</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Dentate_gyrus-CA3">
+    <rdfs:label>Dentate gyrus-CA3</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N5bf34878a5d04e338ea48143a811e0dc">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/CA3"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N7a747f6aeafe468a9c49b652c506616f">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Dentate_gyrus"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:transmitter rdf:resource="https://wba-initiative.org/bifd/Glutamate"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Retrosplenial_cortex">
+    <rdfs:label xml:lang="en">retrosplenial cortex</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Retrosplenial cortex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/S">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">S</rdfs:label>
+    <rdfs:label>S</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/GPi-Matrix">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N7cae4f4879394990a1621f2be3a388a6">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/GPi"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>GPi-Matrix</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ndeaf3b5c6ae942d2bdc570924ac35db4">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Matrix"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/STN-SNr">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ncd747205e7aa45eebd80843595a06d36">
+        <owl:someValuesFrom rdf:resource="http://wba-initiative.org/wbra/SNr"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N54e71a75f15141748e11f78cf623281b">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/STN"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Restrains SC</bifd:functionality>
+    <rdfs:label>STN-SNr</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/ITG-vTP">
+    <rdfs:label>ITG-vTP</rdfs:label>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Visual information</bifd:functionality>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N3184fbfb57b449c5b44fbb260da99614">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/ITG"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/inputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N37a6f0980beb4be9b07cfb45f08f7be7">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VTP"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/outputCircuit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <bifd:size rdf:datatype="http://www.w3.org/2001/XMLSchema#double">200000.0</bifd:size>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Connection"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Principal_sulcus">
+    <rdfs:label xml:lang="en">principal sulcus</rdfs:label>
+    <rdfs:label>Principal sulcus</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Cellebellum">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>Cellebellum</rdfs:label>
+    <rdfs:label xml:lang="en">cellebellum</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SCi">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>SCi</rdfs:label>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SCi is more closely associated with the role of a priority map4, which plays an important role in determining which salient signals are selected for the moment-by-moment locus of gaze.</bifd:functionality>
+    <rdfs:label xml:lang="en">SCi</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/VmPu">
+    <rdfs:label xml:lang="en">vmPu</rdfs:label>
+    <rdfs:label>VmPu</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/OPFC">
+    <rdfs:label>OPFC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label xml:lang="en">oPFC</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/OFC">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>OFC</rdfs:label>
+    <rdfs:label xml:lang="en">OFC</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Basilar_pons">
+    <rdfs:label>Basilar pons</rdfs:label>
+    <rdfs:label xml:lang="en">basilar pons</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/ITG">
+    <rdfs:label xml:lang="en">ITG</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>ITG</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PFC">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N613314b10c614919be5ecbe4563ddae6">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/OPFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N1555e25a0c78406c9abdc8c71cded1b1">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/LPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N83ed150c903c49e385235115010d4b26">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VlPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nee561657ec61451985606390be818308">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/CPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nff5aa5b9cdba44658179e47c89c224b4">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/ClPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>PFC</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N648eac5663894c00aeeef172f28c84ba">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/APFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N1430919b10374e319e3e622a2af05adc">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VdlPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N4f05e883e4884caba239402c9079ae95">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/DlPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N4a02e578b0e1406eb1026dd63c68b340">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/MPFC"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N4582ec0e3f0e4cce829c9bf259ff2a2f">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/RvdlPFC"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">PFC</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Matrix">
+    <rdfs:label>Matrix</rdfs:label>
+    <rdfs:label xml:lang="en">Matrix</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Cx">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">Cx</rdfs:label>
+    <rdfs:label xml:lang="en">cerebral cortex</rdfs:label>
+    <rdfs:label>Cx</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Ios">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">Ios</rdfs:label>
+    <rdfs:label>Ios</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Brain_Stem">
+    <rdfs:label xml:lang="en">Brain Stem</rdfs:label>
+    <rdfs:label>Brain Stem</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Proisocortex">
+    <rdfs:label xml:lang="en">Proisocortex</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Proisocortex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/STN">
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">オライリーによれば、Response inhibitionであり。
+ハイパーダイレクトによって、決定までの時間を制御するしきい値をコントロールしている。</bifd:functionality>
+    <rdfs:label xml:lang="en">STN</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>STN</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/MPu">
+    <rdfs:label>MPu</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label xml:lang="en">mPu</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/ClPFC">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>ClPFC</rdfs:label>
+    <rdfs:label xml:lang="en">clPFC</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Pu">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">Pu</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nb97c26671448497d87c40fcd0d60007b">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VmPu"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N2749b35321e849a799841e885507deeb">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/MPu"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Pu</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/DTP">
+    <rdfs:label>DTP</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label xml:lang="en">dTP</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Ins">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">Ins</rdfs:label>
+    <rdfs:label>Ins</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/VTP">
+    <rdfs:label xml:lang="en">vTP</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>VTP</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Orbitofrontal_cortex">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Orbitofrontal cortex</rdfs:label>
+    <rdfs:label xml:lang="en">orbitofrontal cortex</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/LOrG">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">LOrG</rdfs:label>
+    <rdfs:label>LOrG</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Str">
+    <bifd:tag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BG</bifd:tag>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N3dbfa5abd7ce47449ec2a78616eb4ff7">
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Matrix"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Nbf23205c517f4d4abba82a63e1c295a5">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/Striosome"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label xml:lang="en">striatum</rdfs:label>
+    <rdfs:label xml:lang="en">Str</rdfs:label>
+    <rdfs:label>Str</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Striosome">
+    <rdfs:label xml:lang="en">Striosome</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>Striosome</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SbN">
+    <rdfs:label>SbN</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">SbN</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Amg">
+    <rdfs:label xml:lang="en">Amg</rdfs:label>
+    <rdfs:label xml:lang="en">Amygdala</rdfs:label>
+    <rdfs:label>Amg</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/CCd">
+    <rdfs:label>CCd</rdfs:label>
+    <rdfs:label xml:lang="en">cCd</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/HiF">
+    <rdfs:label xml:lang="en">HiF</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>HiF</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Hy">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>Hy</rdfs:label>
+    <rdfs:label xml:lang="en">Hy</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/VCd">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>VCd</rdfs:label>
+    <rdfs:label xml:lang="en">vCd</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/TH">
+    <rdfs:label xml:lang="en">thalamus</rdfs:label>
+    <rdfs:label xml:lang="en">TH</rdfs:label>
+    <rdfs:label>TH</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SNC">
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Involved in learning and task reward
+予測報酬誤差＝PPNから実報酬ー線条体からの予測報酬</bifd:functionality>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label xml:lang="en">SNC</rdfs:label>
+    <rdfs:label>SNC</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/LPFC">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label xml:lang="en">lPFC</rdfs:label>
+    <bifd:reference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.1152/physrev.00014.2007</bifd:reference>
+    <rdfs:label>LPFC</rdfs:label>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Critically involved in broad aspects of executive behavioral control.
+ The role of this area in more general aspects of behavioral planning.
+ This area take part in selective attnetion for action and in selecting an intended action.
+ Strategic behavioral planning and for the development of knowledge that enables the planning of macrostructures of event-action sequences at the conceptual level.</bifd:functionality>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PPTg">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">報酬の実信号を計算している</bifd:functionality>
+    <rdfs:label xml:lang="en">PPTg</rdfs:label>
+    <rdfs:label>PPTg</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/CA1">
+    <rdfs:label xml:lang="en">CA1</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>CA1</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/GPe">
+    <rdfs:label>GPe</rdfs:label>
+    <rdfs:label xml:lang="en">GPe</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/CPFC">
+    <rdfs:label>CPFC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label xml:lang="en">cPFC</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/CA3">
+    <rdfs:label>CA3</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label xml:lang="en">CA3</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SNR">
+    <rdfs:label xml:lang="en">SNR</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>SNR</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/SCs">
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature selectivity for orientation and direction</bifd:functionality>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>SCs</rdfs:label>
+    <rdfs:label xml:lang="en">SCs</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PrS">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>PrS</rdfs:label>
+    <rdfs:label xml:lang="en">PrS</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/VdlPFC">
+    <rdfs:label xml:lang="en">vdlPFC</rdfs:label>
+    <rdfs:label>VdlPFC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/MPFC">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>MPFC</rdfs:label>
+    <rdfs:label xml:lang="en">mPFC</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/VFEF">
+    <rdfs:label xml:lang="en">vFEF</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>VFEF</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Iso">
+    <rdfs:label>Iso</rdfs:label>
+    <rdfs:label xml:lang="en">Iso</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/PAll">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">PAll</rdfs:label>
+    <rdfs:label>PAll</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/RTPO">
+    <rdfs:label xml:lang="en">rTPO</rdfs:label>
+    <rdfs:label>RTPO</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Cd">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="N6a7a8a152b534f06966d83be8982df90">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/VCd"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Cd</rdfs:label>
+    <rdfs:label xml:lang="en">Cd</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="Ncc8aaa5e60c84ae184b39b0059832fe4">
+        <owl:someValuesFrom rdf:resource="https://wba-initiative.org/wbra/CCd"/>
+        <owl:onProperty rdf:resource="https://wba-initiative.org/bifd/hasPart"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/RvdlPFC">
+    <rdfs:label>RvdlPFC</rdfs:label>
+    <rdfs:label xml:lang="en">rvdlPFC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/GPi">
+    <bifd:functionality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">principal basal ganglia output for control of limb movement.</bifd:functionality>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label xml:lang="en">GPi</rdfs:label>
+    <rdfs:label>GPi</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/APFC">
+    <rdfs:label xml:lang="en">aPFC</rdfs:label>
+    <rdfs:label>APFC</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/DlPFC">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>DlPFC</rdfs:label>
+    <rdfs:label xml:lang="en">dlPFC</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/VlPFC">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/UniformCircuit"/>
+    <rdfs:label>VlPFC</rdfs:label>
+    <rdfs:label xml:lang="en">vlPFC</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Spinal_Cord">
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label>Spinal Cord</rdfs:label>
+    <rdfs:label xml:lang="en">Spinal Cord</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/Dentate_gyrus">
+    <rdfs:label>Dentate gyrus</rdfs:label>
+    <owl:sameAs rdf:resource="http://purl.obolibrary.org/obo/UBERON_0001885"/>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+    <rdfs:label xml:lang="en">Dentate gyrus</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="https://wba-initiative.org/wbra/STG">
+    <rdfs:label xml:lang="en">STG</rdfs:label>
+    <rdfs:label>STG</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://wba-initiative.org/bifd/Circuit"/>
+  </owl:Class>
+</rdf:RDF>

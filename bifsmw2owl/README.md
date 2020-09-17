@@ -20,7 +20,7 @@
 ./bifsmw2owl.sh -b (BIF ontology file) -d (semantic mediawiki dump) -h (header.rdf) -o (output file) -m
 ```
 - Output file
-  - result.owl
+  - converted.owl
 - Working files
   - s.tsv (subject, object URI mapping)
   - p.tsv (predicate URI mapping)
