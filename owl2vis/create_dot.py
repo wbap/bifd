@@ -10,6 +10,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("input", help="input file", type=str)
 parser.add_argument("output", help="output file", type=str)
+parser.add_argument("bifd", help="bifd.owl", type=str)
 args = parser.parse_args()
 
 URI_TMP = 'https://wba-initiative.org/noprefix/'
@@ -17,7 +18,7 @@ URI_TMP = 'https://wba-initiative.org/noprefix/'
 g = rdflib.Graph()
 g.parse(args.input, publicID=URI_TMP, format="xml")
 g_bifd = rdflib.Graph()
-g_bifd.parse("bifd.owl", publicID=URI_TMP, format="xml")
+g_bifd.parse(args.bifd, publicID=URI_TMP, format="xml")
 
 dg = Digraph(engine="fdp", format="svg")
 dg.attr(compound='true')
@@ -124,7 +125,7 @@ for s in chain(g.subjects(), g.objects()):
         if str(s) in tooltip_text.keys() and len(tooltip) > 0:
             dg.node(str(s), name, tooltip=tooltip, shape=shape)
         else:
-            dg.node(str(s), name, shape=shape)
+            dg.node(str(s), name, shape=shape, width = "0.1", height = "0.1")
 
 
 query_object_prop = g_bifd.query(
