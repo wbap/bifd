@@ -23,6 +23,10 @@ def createCircuits(ws):
                         if clm7 is not None and clm7:
                             uniform = True
                         with onto:
+                            try:
+                                eval('onto.' + className)
+                            except SyntaxError:
+                                className = '_' + className
                             if uniform:
                                 cls = types.new_class(className, (bifdns.UniformCircuit,))
                             else:
@@ -55,13 +59,21 @@ def addHasPart(parts, className):
         return
     pos = className.find(':')
     if pos < 0:
-        cls = eval("onto." + className)
+        try:
+            cls = eval("onto." + className)
+        except SyntaxError:
+            className = "_" + className
+            cls = eval("onto." + className)
         for part in prts:
             pn = part.strip()
             pos = pn.find(':')
             if pos < 0:
                 pn = pn.replace(' ', '_')
-                prt = eval("onto." + pn)
+                try:
+                    prt = eval("onto." + pn)
+                except SyntaxError:
+                    pn = '_' + pn
+                    prt = eval("onto." + pn)
             else:
                 prefix = pn[:pos]
                 pn = pn[pos + 1:].replace(' ', '_')
