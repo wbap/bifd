@@ -1,0 +1,31 @@
+{
+  "Project": {
+    "DataSet": 1,
+    "Description": 3
+  },
+  "Circuit": {
+    "ID": 1,
+    "Names": 2,
+    "SuperClasses": 3,
+    "Parts": 4,
+    "Functionality": 5,
+    "References": 6,
+    "Uniform": 8,
+    "Transmitter": 9,
+    "ModType": 10,
+    "Comments": 11
+  },
+  "Connection" : {
+    "InputCircuit": 1,
+    "OutputCircuit": 2,
+    "Transmitter": 3,
+    "Functionality": 4,
+    "References": 5,
+    "ModType": 7,
+    "Comments": 8
+  },
+  "Reference": {
+    "DOI": 6,
+    "URL": 7
+  }
+}

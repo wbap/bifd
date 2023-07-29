@@ -1,26 +1,26 @@
 # -*- coding: utf-8 -*-
 """BIF_Exel2OWL.py
-    USE: python bif_exel2owl.py infile bifd_url outfile
+    USE: python bif_exel2owl.py config bifd_url infile outfile
 """
 import openpyxl
 from owlready2 import *
 import inspect
+import json
 
 
-def createCircuits(ws):
+def createCircuits(ws, config):
     for p in range(2):
         for i in range(ws.max_row - 1):
-            val = ws.cell(row=i + 2, column=1).value
+            val = ws.cell(row=i + 2, column=config["ID"]).value
             if val is not None and val.strip() != "":
                 className = val.strip().replace(' ', '_')
                 if p == 0:  # 1st pass
                     if val.find(':') < 0:
-                        clm4 = ws.cell(row=i + 2, column=5).value  # Functionality
-                        clm5 = ws.cell(row=i + 2, column=6).value  # References
-                        clm6 = ws.cell(row=i + 2, column=7).value  # TODO: implementation
-                        clm7 = ws.cell(row=i + 2, column=8).value  # Uniform?
+                        functionality = ws.cell(row=i + 2, column=config["Functionality"]).value  # Functionality
+                        references = ws.cell(row=i + 2, column=config["References"]).value  # References
+                        uv = ws.cell(row=i + 2, column=config["Uniform"]).value  # Uniform?
                         uniform = False
-                        if clm7 is not None and clm7:
+                        if uv is not None and uv:
                             uniform = True
                         with onto:
                             try:
@@ -31,16 +31,16 @@ def createCircuits(ws):
                                 cls = types.new_class(className, (bifdns.UniformCircuit,))
                             else:
                                 cls = types.new_class(className, (bifdns.Circuit,))
-                            labels = ws.cell(row=i + 2, column=2).value
+                            labels = ws.cell(row=i + 2, column=config["Names"]).value
                             addLabels(labels, cls)
-                            if clm4 is not None and clm4 != "":
-                                cls.functionality = clm4
-                            if clm5 is not None and clm5 != "":
-                                references = clm5.split(";")
+                            if functionality is not None and functionality != "":
+                                cls.functionality = functionality
+                            if references is not None and references != "":
+                                references = references.split(";")
                                 cls.reference = references
                 else:   # 2nd pass
-                    parts = ws.cell(row=i + 2, column=4).value
-                    superClasses = ws.cell(row=i + 2, column=3).value
+                    parts = ws.cell(row=i + 2, column=config["Parts"]).value
+                    superClasses = ws.cell(row=i + 2, column=config["SuperClasses"]).value
                     addHasPart(parts, className)
                     addSubClassOf(superClasses, className)
 
@@ -121,32 +121,31 @@ def addSubClassOf(superClasses, className):
                 cls.is_a.append(sc)
 
 
-def createConnections(ws):
+def createConnections(ws, config):
     for i in range(ws.max_row - 1):
         inputCircuit = ""
-        col1 = ws.cell(row=i + 2, column=1).value
-        if col1 is not None and col1.strip() != "":
-            pos = col1.find(':')
-            inputCircuit = col1.strip().replace(' ', '_') if pos < 0 else col1[pos + 1:].strip().replace(' ', '_')
+        input = ws.cell(row=i + 2, column=config["InputCircuit"]).value
+        if input is not None and input.strip() != "":
+            pos = input.find(':')
+            inputCircuit = input.strip().replace(' ', '_') if pos < 0 else input[pos + 1:].strip().replace(' ', '_')
         outputCircuit = ""
-        col2 = ws.cell(row=i + 2, column=2).value
-        if col2 is not None and col2.strip() != "":
-            pos = col2.find(':')
-            outputCircuit = col2.strip().replace(' ', '_') if pos < 0 else col2[pos + 1:].strip().replace(' ', '_')
+        output = ws.cell(row=i + 2, column=config["OutputCircuit"]).value
+        if output is not None and output.strip() != "":
+            pos = output.find(':')
+            outputCircuit = output.strip().replace(' ', '_') if pos < 0 else output[pos + 1:].strip().replace(' ', '_')
         if inputCircuit == "" or outputCircuit == "":
             continue
         connectionID = inputCircuit + "-" + outputCircuit
         with onto:
             cls = types.new_class(connectionID, (bifdns.Connection,))
             cls.label = connectionID
-            addInOut(cls, col1.strip(), col2.strip())
-            clm3 = ws.cell(row=i + 2, column=4).value  # TODO: Transmitter
-            clm4 = ws.cell(row=i + 2, column=4).value  # Functionality
-            clm5 = ws.cell(row=i + 2, column=5).value  # References
-            if clm4 is not None and clm4 != "":
-                cls.functionality = clm4
-            if clm5 is not None and clm5 != "":
-                references = clm5.split(";")
+            addInOut(cls, input.strip(), output.strip())
+            functionality = ws.cell(row=i + 2, column=config["Functionality"]).value  # Functionality
+            references = ws.cell(row=i + 2, column=config["References"]).value  # References
+            if functionality is not None and functionality != "":
+                cls.functionality = functionality
+            if references is not None and references != "":
+                references = references.split(";")
                 cls.reference = references
 
 
@@ -175,18 +174,22 @@ def addInOut(cls, inputCircuit, outputCircuit):
 
 if __name__ == '__main__':
     if len(sys.argv) <= 3:
-        print("USE: python bif_exel2owl.py infile bifd_url outfile")
+        print("USE: python bif_exel2owl.py config bifd_url infile outfile")
         exit()
 
-    infilePath = sys.argv[1]
-    outfilePath = sys.argv[3]
+    configPath = sys.argv[1]
+    infilePath = sys.argv[3]
+    outfilePath = sys.argv[4]
     lastSlash = infilePath.rfind('/')
     if lastSlash >= 0:
         infileName = infilePath[lastSlash + 1:]
     else:
         infileName = infilePath
 
-    wb = openpyxl.load_workbook(sys.argv[1])
+    with open(configPath) as f:
+        config = json.load(f)
+
+    wb = openpyxl.load_workbook(infilePath)
     bifd = get_ontology(sys.argv[2]).load()
 
     bifdns = bifd.get_namespace('https://wba-initiative.org/bifd/')
@@ -205,15 +208,16 @@ if __name__ == '__main__':
 
     # Defining an ontoloby
     project = wb['Project']
-    pname = project.cell(row=2, column=1).value
+    project_name_column = config["Project"]["DataSet"]
+    pname = project.cell(row=2, column=project_name_column).value
     if not pname:
         print("Error: no project name")
         exit()
-    description = project.cell(row=2, column=3).value
+    description = project.cell(row=2, column=config["Project"]["Description"]).value
     onto = get_ontology("https://wba-initiative.org/wbra/" + pname + "/")
     onto.metadata.comment.append(description)
 
-    createCircuits(wb['Circuit'])
-    createConnections(wb['Connection'])
+    createCircuits(wb['Circuit'], config["Circuit"])
+    createConnections(wb['Connection'], config["Connection"])
     # onto_path.append(outfilePath)
     onto.save(file=outfilePath)
